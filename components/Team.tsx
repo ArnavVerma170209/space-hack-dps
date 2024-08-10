@@ -2,12 +2,15 @@ import { cn } from "@/lib/utils";
 import { Anton, DM_Sans } from "next/font/google";
 import React from "react";
 import sv from "@/public/sv.webp";
+import { ShootingStars } from "./aceternity/shooting-stars";
+import { StarsBackground } from "./aceternity/stars-background";
 const font = DM_Sans({ subsets: ["latin"], weight: ["900"] });
 const Titlefont = Anton({ subsets: ["latin"], weight: ["400"] });
 const light_font = DM_Sans({ subsets: ["latin"], weight: ["500"] });
 
 const Team = () => {
   return (
+    <>
     <div className="h-full mt-28 lg:mt-0 py-12 flex justify-between flex-col w-screen bg-[#060606] -z-1">
       <h1
         className={cn(
@@ -44,7 +47,10 @@ const Team = () => {
         </div>
       </div>
     </div>
-  );
+      <StarsBackground />
+      <ShootingStars/>
+</>
+);
 };
 
 export default Team;

@@ -3,11 +3,12 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/use-smooth-scroll";
 import Footer from "@/components/Footer";
+import Navbar  from "@/components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CELESTIA",
+  title: "Celestia",
   description: "next generation solution to space rescues",
 };
 
@@ -22,8 +23,11 @@ export default function RootLayout({
         <link rel="icon" href="/logo.svg" sizes="any" />
       </head>
       <body className={inter.className}>
-        <SmoothScrolling>{children}</SmoothScrolling>
-        <Footer /> 
+        <SmoothScrolling>
+          <Navbar /> 
+          {children}
+          <Footer />
+        </SmoothScrolling>
       </body>
     </html>
   );

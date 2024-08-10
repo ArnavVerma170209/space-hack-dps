@@ -4,11 +4,11 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Anton, DM_Sans } from "next/font/google";
 import { ArrowDown } from "lucide-react";
-import Navbar from "@/components/Navbar";
 import About from "@/components/About";
-import Features  from "@/components/Features";
+import Features from "@/components/Features";
 import Team from "@/components/Team";
 import Easter from "@/components/Easter";
+import Problem from "@/components/Problem";
 const anton = Anton({ subsets: ["latin"], weight: "400" });
 const dm_sans = DM_Sans({ subsets: ["latin"], weight: "400" });
 
@@ -16,7 +16,6 @@ export default function Home() {
   return (
     <>
       <div className="h-screen bg-[#060606] flex flex-col items-center justify-between relative w-screen">
-        <Navbar />
         <div className="flex justify-center items-center flex-col h-full">
           <p
             className={cn(
@@ -43,10 +42,10 @@ export default function Home() {
         <ShootingStars />
         <StarsBackground />
       </div>
-      <About />
+      <About /> <Problem />
       <Features />
       <Team />
-      <Easter /> 
+      <Easter />
     </>
   );
 }
