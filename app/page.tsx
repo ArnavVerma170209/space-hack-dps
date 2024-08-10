@@ -7,6 +7,8 @@ import { ArrowDown } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import Features  from "@/components/Features";
+import Team from "@/components/Team";
+import Easter from "@/components/Easter";
 const anton = Anton({ subsets: ["latin"], weight: "400" });
 const dm_sans = DM_Sans({ subsets: ["latin"], weight: "400" });
 
@@ -43,6 +45,8 @@ export default function Home() {
       </div>
       <About />
       <Features />
+      <Team />
+      <Easter /> 
     </>
   );
 }

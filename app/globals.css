@@ -68,7 +68,8 @@
   }
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   background-color: #060606;
 }
@@ -91,3 +92,21 @@ html, body {
 /* ::-webkit-scrollbar-thumb:hover {
   background: #555;
 } */
+
+.svDiv {
+  background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgba(0, 0, 0, 0.8)),
+    url("./../public/sv.webp");
+  background-size: cover;
+  background-position: center center;
+}
+.avDiv {
+  background: linear-gradient(rgba(255, 255, 255, 0) 10%, rgba(0, 0, 0, 0.8)),
+    url("./../public/av.webp");
+  background-size: cover;
+  background-position: center center;
+}
+.arni {
+  background: url("./../public/arni.png");
+  background-size: cover;
+  background-position: center center;
+}

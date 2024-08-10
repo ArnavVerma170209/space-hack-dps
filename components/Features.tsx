@@ -7,7 +7,7 @@ const font = Anton({ subsets: ["latin"], weight: "400" });
 
 const Features = () => {
   return (
-    <div className="h-screen flex flex-col justify- ">
+    <div className="h-full  flex flex-col mb-20 lg:mb-0 ">
       <h1
         className={cn(
           font.className,
