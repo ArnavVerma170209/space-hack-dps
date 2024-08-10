@@ -36,7 +36,7 @@ const Navbar = () => {
       </div>
       <div className="lg:flex hidden p-2 rounded-full gap-2 text-[#E0FF30]">
         {links.map((link, i) => (
-          <Link href={link.href}>
+          <Link href={link.href} key={i}>
             {" "}
             <Button
               className={cn(
@@ -44,7 +44,6 @@ const Navbar = () => {
                 "gap-2 px-4 rounded-full hover:bg-[#f0f0f0] transition duration-500 hover:text-[#060606] z-[100] bg-[#E0FF30] text-[#060606]  flex",
                 link.href === path && "bg-[#f0f0f0] text-[#060606]"
               )}
-              key={i}
             >
               {link.name}
             </Button>
