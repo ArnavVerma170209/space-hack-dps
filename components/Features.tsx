@@ -20,7 +20,7 @@ const Features = () => {
         <div className="rounded-xl lg:w-1/3 bg-[#E0FF30] text-4xl p-2 lg:h-auto h-[calc(90%/1.5)]">
           <h1 className={cn(font.className, "uppercase ")}>
             1. The mission starts by calculating the time available, determining
-            the best trajectory, and assessing the situation's severity. This
+            the best trajectory, and assessing the situation&apos;s severity. This
             helps prioritize actions to ensure a timely rescue.
           </h1>
         </div>
