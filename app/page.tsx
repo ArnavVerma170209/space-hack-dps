@@ -39,8 +39,8 @@ export default function Home() {
           </Button>
         </div>
 
-        <ShootingStars />
-        <StarsBackground />
+        {/* <ShootingStars />
+        <StarsBackground /> */}
       </div>
       <About /> <Problem />
       <Features />
