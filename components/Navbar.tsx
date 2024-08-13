@@ -7,8 +7,10 @@ import { DM_Sans } from "next/font/google";
 import { cn } from "@/lib/utils";
 import { Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
+import { SignInButton, SignOutButton } from "@clerk/nextjs";
 
-const font = DM_Sans({ subsets: ["latin"], weight: ["400"] });
+const font = DM_Sans({ subsets: ["latin"], weight: ["500"] });
 const links = [
   {
     href: "/",
@@ -42,13 +44,41 @@ const Navbar = () => {
               className={cn(
                 font.className,
                 "gap-2 px-4 rounded-full hover:bg-[#f0f0f0] transition duration-500 hover:text-[#060606] z-[100] bg-[#E0FF30] text-[#060606]  flex",
-                link.href === path && "bg-[#f0f0f0] text-[#060606]"
+                link.href === path && "bg-[#E0FF40] text-[#060606]"
               )}
             >
               {link.name}
             </Button>
           </Link>
         ))}
+        <SignedOut>
+          <SignInButton>
+            <Link href={"/login"}>
+              {" "}
+              <Button
+                className={cn(
+                  font.className,
+                  "gap-2 px-4 rounded-full  transition duration-500 border-[1.6px] z-[100] border-[#E0FF30] text-[#E0FF30]  flex bg-transparent hover:bg-[#E0FF30] hover:text-[#060606]"
+                )}
+              >
+                Register
+              </Button>
+            </Link>
+          </SignInButton>
+        </SignedOut>
+        <SignedIn>
+          <Link href={"/dashboard"}>
+            {" "}
+            <Button
+              className={cn(
+                font.className,
+                "gap-2 px-4 rounded-full  transition duration-500 border-[1.6px] z-[100] border-[#E0FF30] text-[#E0FF30]  flex bg-transparent hover:bg-[#E0FF30] hover:text-[#060606]"
+              )}
+            >
+              Dashboard
+            </Button>
+          </Link>
+        </SignedIn>
       </div>
     </div>
   );
