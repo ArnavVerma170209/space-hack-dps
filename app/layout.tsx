@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { DM_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/use-smooth-scroll";
 import Footer from "@/components/Footer";
@@ -8,7 +8,7 @@ import {
   ClerkProvider,
 } from "@clerk/nextjs";
 
-const inter = Inter({ subsets: ["latin"] });
+const dm_sans= DM_Sans({ subsets: ["latin"], weight : ['300'] });
 
 export const metadata: Metadata = {
   title: "Celestia",
@@ -26,7 +26,7 @@ export default function RootLayout({
         <head>
           <link rel="icon" href="/logo.svg" sizes="any" />
         </head>
-        <body className={inter.className}>
+        <body className={dm_sans.className}>
           <SmoothScrolling>
             {/* <Navbar /> */}
             {children}
