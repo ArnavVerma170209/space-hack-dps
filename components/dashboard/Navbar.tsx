@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -95,6 +95,7 @@ const Navbar = () => {
       form.reset();
       router.refresh();
       window.location.reload();
+      // createVictim(values)
     } catch (error) {
       console.log(error);
     }
